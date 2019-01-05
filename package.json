@@ -1,0 +1,33 @@
+{
+  "name": "kgenesis",
+  "version": "0.0.1",
+  "description": "Sistema de Punto de Venta para Kioskos",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "generator": "^1.0.1",
+    "mongodb": "^3.1.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "console.log(\"Hola\")"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r0binxp/KioscoGenesis.git"
+  },
+  "keywords": [
+    "Kiosko",
+    "TPV",
+    "Punto",
+    "de",
+    "Venta",
+    "Gestion"
+  ],
+  "author": "ArenaZero",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/r0binxp/KioscoGenesis/issues"
+  },
+  "homepage": "https://github.com/r0binxp/KioscoGenesis#readme"
+}
