@@ -24,7 +24,6 @@ app.get('/productos', function(req, res){
     res.sendFile(path.join(__dirname + 'pages/productos/productos.html'));
 });
 
-
 app.listen(3000, function(){
     console.log('Se abrio el servidor en el puerto 3000');
 });
