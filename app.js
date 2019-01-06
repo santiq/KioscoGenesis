@@ -3,6 +3,8 @@ var app = express();
 var path = require ('path');
 var firebase = require('firebase');
 
+app.use(express.static(__dirname + '/pages'));
+
 app.get('/', function(req, res){
     res.sendFile(path.join(__dirname + '/pages/login/login.html'));
 });
@@ -14,6 +16,7 @@ app.get('/ventas', function(req, res){
 app.get('/productos', function(req, res){
     res.sendFile(path.join(__dirname + 'pages/productos/productos.html'));
 });
+
 
 app.listen(3000, function(){
     console.log('Se abrio el servidor en el puerto 3000');
