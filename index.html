@@ -5,8 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" 
 </head>
 <body>
     <h1>ESTA ES LA APP</h1>
+
+ <form action="/ventas" methos="post">
+   <input type="submit" value="pasar a pagina desde post" />
+</form>   
+<button onclick="cambioPagina('/ventas')">
+CAMBIAR DE PAGINA 
+</button>
+<div id="contenedor" class="container-fluid">
+    <!--// quiero ver si carga la info aca-->
+
+
+
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script type="text/javascript">   // ACA PRUEBO CARGAR UNA PAGINA DESDE EL ESTADO
+
+const cambioPagina = function(pagina) {
+     $.post( pagina, function(data){
+        $("#contenedor").html(data);
+     });
+    
+}
+
+
+
+</script>
 </body>
+
+
+
+
+
 </html>
