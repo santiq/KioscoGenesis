@@ -3,7 +3,7 @@ var app = express();
 var path = require ('path');
 const bodyParser = require('body-parser');
 var admin = require("firebase-admin");
-var serviceAccount = require("./kioscogenesis-26031-firebase-adminsdk-mjxw1-7ff25d47c3.json");
+var serviceAccount = require("./kioscogenesis-26031-firebase-adminsdk-mjxw1-e30be1f7d1.json");
 
 
 // ACA ESPECIFICO LOS DIRECTORIO DE ARCHIVOS ESTATICOS
