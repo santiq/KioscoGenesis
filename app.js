@@ -3,7 +3,10 @@ var app = express();
 var path = require ('path');
 var firebase = require('firebase');
 
-app.use(express.static(__dirname + '/pages'));
+app.use(express.static(__dirname + '/pages/login/'));
+app.use(express.static(__dirname + '/pages/productos/'));
+app.use(express.static(__dirname + '/pages/ventas/'));
+app.use(express.static(__dirname + '/assets/'));
 
 app.get('/', function(req, res){
     res.sendFile(path.join(__dirname + '/pages/login/login.html'));
