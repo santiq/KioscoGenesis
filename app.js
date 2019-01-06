@@ -11,6 +11,10 @@ app.use(express.static(__dirname + '/assets/'));
 app.get('/', function(req, res){
     res.sendFile(path.join(__dirname + '/pages/login/login.html'));
 });
+app.get('/firebase', function(req, res){
+    res.sendFile(path.join(__dirname + '/index.html'));
+});
+
 
 app.get('/ventas', function(req, res){
     res.sendFile(path.join(__dirname + '/pages/ventas/ventas.html'));
@@ -42,4 +46,6 @@ app.listen(3000, function(){
     firebase.initializeApp(config);
  }
 
- var database = firebase.database();
+
+ 
+ //var rootRef = firebase.database().ref();
