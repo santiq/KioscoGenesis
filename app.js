@@ -7,9 +7,10 @@ var serviceAccount = require("./kioscogenesis-26031-firebase-adminsdk-mjxw1-e30b
 
 
 // ACA ESPECIFICO LOS DIRECTORIO DE ARCHIVOS ESTATICOS
-app.use(express.static(__dirname + '/pages/login'));
-app.use(express.static(__dirname + '/pages/login'));
-app.use(express.static(__dirname + '/pages/login'));
+app.use(express.static(__dirname + '/dist/js'));
+app.use(express.static(__dirname + '/dist/css'));
+app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/dist/images'));
 
 
 // ACA INICIO TODO LO RELACIONADO A FIREBASE Y TIRO UNA PRUEBA EN CONSOLA
@@ -45,13 +46,23 @@ app.get('/productos', (req, res) => {
 app.get('/firebase', (req, res) => {
     
     //ref.push(productos);
-    res.sendFile(path.join(__dirname + '/index.html'));
+    res.sendFile(path.join(__dirname + '/public/index.html'));
 });
+
+// ACA HAGO LOS ROUTES PERO UTTILIZANDO THEME
 app.post('/ventas', (req, res) => {
     res.sendFile(path.join(__dirname + '/pages/ventas/ventas.html'));
-})
-
+});
 // FIN ROUTES
+
+// ACA VOY A HACER UNA PEQUEÑA API REST PARA ENVIAR A FIREBASE
+app.post('/push', (req, res) => {
+    ref.push(req);
+});
+app.post('/update', (req, res) => {
+    ref.update(req);
+});
+
 
 app.listen(3000, function(){
     console.log('Se abrio el servidor en el puerto 3000');

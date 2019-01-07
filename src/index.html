@@ -16,6 +16,10 @@
 <button onclick="cambioPagina('/ventas')">
 CAMBIAR DE PAGINA 
 </button>
+
+<button onclick="enviarDatos('/push','{"nombre":"peperoni"}')">
+    Prueba de Envio de Datos 
+    </button>
 <div id="contenedor" class="container-fluid">
     <!--// quiero ver si carga la info aca-->
 
@@ -31,16 +35,24 @@ CAMBIAR DE PAGINA
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <script type="text/javascript">   // ACA PRUEBO CARGAR UNA PAGINA DESDE EL ESTADO
 
-const cambioPagina = function(pagina) {
-     $.post( pagina, function(data){
+const cambioPagina = (pagina) => {
+     $.post( pagina, (data) => {
         $("#contenedor").html(data);
      });
+    
+}
+const enviarDatos = (accion, datos) => {
+    let aEnviar = datos;
+    console.log(accion);
+    console.log(aEnviar + " ESTA ES LA PRIMERA");
+    $.post( accion, aEnviar);
     
 }
 
 
 
 </script>
+<script src="bundle.js"></script>
 </body>
 
 
