@@ -5,17 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <LINK REL=StyleSheet HREF="login.css" TYPE="text/css" MEDIA=screen>
 
 </head>
 <body>
-        <h1>LOGIN</h1>
+        <!--<h1>LOGIN</h1>
+        <div class="formulario">
+        <P>User:    <INPUT type="text" name="login" id="usuario"> 
+            <P>Pass: <INPUT type="password" name="password" id="contraseña"><br> 
+                <button onClick="validar()" type="button" class="btn btn-primary btn-sm">Login</button>
+                
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpE6P7RVuE8rHJNZiwkmUloF_8h-ydgK3khlVJEQpYv2nXqWaR" alt="logo">
+        </div>
+         -->
 
-            <P>Usuario:    <INPUT type="text" name="login" id="usuario"> 
-            <P>Contraseña: <INPUT type="password" name="password" id="contraseña"><br> 
-            <button onClick="validar()">acceder</button>
 
-       
-    <script type="text/javascript" src="login.js"></script>
-</body>
+
+        <body id="LoginForm">
+            <div class="container">
+                <h1 class="form-heading">LOGIN</h1>
+                <div class="login-form">
+                    <div class="main-div">
+                        <div class="panel">
+                            <h2>Admin Login</h2>
+                            <p>Ingrese nombre de usuario y contraseña</p>
+                        </div>
+                    <form id="Login">
+            
+                    <div class="form-group">
+            
+            
+                        <input type="text" class="form-control" id="usuario" placeholder="Usuario">
+            
+                    </div>
+            
+                    <div class="form-group">
+            
+                        <input type="password" class="form-control" id="contraseña" placeholder="Password">
+            
+                    </div>
+                    <div class="forgot">
+                        <a href="reset.html">Forgot password?</a>
+                    </div>
+                    <button onClick="validar()" type="button" class="btn btn-primary btn-sm">Login</button>
+            
+                    </form>
+                    </div>
+                    <p class="botto-text">Diseñado por Heredia Studios</p>
+                </div>
+            </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>   
+            <script type="text/javascript" src="login.js"></script>
+            
+
+        </body>
 </html>

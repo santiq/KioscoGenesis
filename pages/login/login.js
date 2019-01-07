@@ -1,17 +1,18 @@
-alert("rasdasd");
+const cambioPagina = function(pagina) {
+    $.post( pagina) 
+      
+   
+}
+
 function validar() {
-
-
-
-
-    
 
     var usuario = document.getElementById("usuario").value;
     var contraseña = document.getElementById("contraseña").value;
 
-    if (usuario === "pako" && contraseña === "programacion"){
+    if (usuario === "pako" && contraseña === "kioskogenesis"){
         
-        alert("Entraste") 
+        cambioPagina('/ventas')
+
     }
 
     else {
