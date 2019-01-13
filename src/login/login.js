@@ -1,10 +1,11 @@
-const cambioPagina = function(pagina) {
+
+const cambioPagina = (pagina) => {
     $.post( pagina) 
       
    
 }
 
-function validar() {
+const validar = () => {
 
     var usuario = document.getElementById("usuario").value;
     var contraseña = document.getElementById("contraseña").value;
@@ -19,3 +20,5 @@ function validar() {
         alert("Ingresa un usuario o contraseña validos")
     }
 }
+
+export {cambioPagina, validar}

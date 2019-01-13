@@ -33,25 +33,25 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // ROUTES
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/pages/login/login.html'));
+    res.sendFile(path.join(__dirname + '/src/login/login.html'));
 });
 
 app.get('/ventas', (req, res) => {
-    res.sendFile(path.join(__dirname + '/pages/ventas/ventas.html'));
+    res.sendFile(path.join(__dirname + '/src/ventas/ventas.html'));
 });
 
 app.get('/productos', (req, res) => {
-    res.sendFile(path.join(__dirname + '/pages/productos/productos.html'));
+    res.sendFile(path.join(__dirname + '/src/productos/productos.html'));
 });
 app.get('/firebase', (req, res) => {
     
     //ref.push(productos);
-    res.sendFile(path.join(__dirname + '/public/index.html'));
+    res.sendFile(path.join(__dirname + '/src/index.html'));
 });
 
 // ACA HAGO LOS ROUTES PERO UTTILIZANDO THEME
 app.post('/ventas', (req, res) => {
-    res.sendFile(path.join(__dirname + '/pages/ventas/ventas.html'));
+    res.sendFile(path.join(__dirname + '/src/ventas/ventas.html'));
 });
 // FIN ROUTES
 
