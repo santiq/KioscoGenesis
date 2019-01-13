@@ -8,6 +8,12 @@ var serviceAccount = require("./kioscogenesis-26031-firebase-adminsdk-mjxw1-e30b
 
 // ACA ESPECIFICO LOS DIRECTORIO DE ARCHIVOS ESTATICOS
 app.use(express.static(__dirname + '/dist/js'));
+app.use(express.static(__dirname + '/src/ventas/ventas.css'));
+app.use(express.static(__dirname + '/src/ventas/ventas.js'));
+app.use(express.static(__dirname + '/src/login/login.js'));
+app.use(express.static(__dirname + '/src/login/login.css'));
+app.use(express.static(__dirname + '/src/productos/productos.js'));
+app.use(express.static(__dirname + '/src/productos/productos.css'));
 app.use(express.static(__dirname + '/dist/css'));
 app.use(express.static(__dirname + '/dist'));
 app.use(express.static(__dirname + '/dist/images'));
