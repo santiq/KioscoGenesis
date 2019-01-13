@@ -7,11 +7,15 @@ var serviceAccount = require("./kioscogenesis-26031-firebase-adminsdk-mjxw1-e30b
 
 
 // ACA ESPECIFICO LOS DIRECTORIO DE ARCHIVOS ESTATICOS
-app.use(express.static(__dirname + '/dist/js'));
+app.use(express.static(__dirname + '/dist/bundle.js'));
+app.use(express.static(__dirname + '/src'));
+app.use(express.static(__dirname + '/src/ventas/'));
 app.use(express.static(__dirname + '/src/ventas/ventas.css'));
 app.use(express.static(__dirname + '/src/ventas/ventas.js'));
+app.use(express.static(__dirname + '/src/login/'));
 app.use(express.static(__dirname + '/src/login/login.js'));
-app.use(express.static(__dirname + '/src/login/login.css'));
+app.use(express.static(__dirname + './src/login/login.css'));
+app.use(express.static(__dirname + '/src/productos/'));
 app.use(express.static(__dirname + '/src/productos/productos.js'));
 app.use(express.static(__dirname + '/src/productos/productos.css'));
 app.use(express.static(__dirname + '/dist/css'));
@@ -40,7 +44,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // ROUTES
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/src/login/login.html'));
+    res.sendFile(path.join(__dirname + '/src/login/login.html'))
+    console.log('estas en la home')
 });
 
 app.get('/ventas', (req, res) => {
