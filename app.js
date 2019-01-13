@@ -11,6 +11,7 @@ app.use(express.static(__dirname + '/dist/js'));
 app.use(express.static(__dirname + '/dist/css'));
 app.use(express.static(__dirname + '/dist'));
 app.use(express.static(__dirname + '/dist/images'));
+app.use(express.static(__dirname + '/dist/bundle.js'));
 
 
 // ACA INICIO TODO LO RELACIONADO A FIREBASE Y TIRO UNA PRUEBA EN CONSOLA
