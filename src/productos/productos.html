@@ -27,22 +27,22 @@
                     <input class="form-control" id="nombreProducto" type="text" name="nombre" placeholder="Nombre o Descripcion del producto">
 
                 </div>
-                <div class="col-6 padding">
+                <div class="col-6 ">
                     <label for="codigoInterno">Codigo Interno</label>
                     <input class="form-control" type="text" name="codigoInterno" id="codigoInterno" placeholder="Codigo como usted lo quiera llamar">
 
                 </div>
-                <div class="col-6 padding">
+                <div class="col-6 ">
                         <label for="ean">Codigo de Barras - EAN</label>
                         <input class="form-control" type="text" name="ean" id="ean" placeholder="Codigo Internacional">
     
                 </div>
-                <div class="col-6 padding">
+                <div class="col-6 ">
                         <label for="precioVenta">Precio De Venta</label>
                         <input class="form-control" type="number" name="precioVenta" id="precioVenta" step="0.01" placeholder="0.00">
     
                 </div>
-                <div class="col-6 padding">
+                <div class="col-6 ">
                         <label for="stock">Stock Inicial</label>
                         <input class="form-control" type="number" name="stock" id="stock" placeholder="Cantidad de Unidades">
              
@@ -57,7 +57,41 @@
                     </button>
                 </div>
 
-            </div>   
+            </div> 
+
+
+            <div class="row">
+                    <table class="table mt-5">
+                            <thead class="thead-light">
+                              <tr>
+                                <th scope="col">Codigo</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Ean</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Stock</th>
+                                <th scope="col">Acciones</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th id="codigoInternoList" scope="row"></th>
+                                <td id="nombreListado"></td>
+                                <td id="eanListado"></td>
+                                <td id="precioVentaListado"></td>
+                                <td id="stockListado"></td>
+                                <td id="acciones"></td>
+                              </tr>
+                              <tr>
+                            </tbody>
+                     </table>
+                    
+                <div id="codigoInternoList" class="col-1"></div>
+                <div id="nombreListado" class="col-5"></div>
+                <div id="eanListado" class="col-2"></div>
+                <div id="precioVentaListado" class="col-1"></div>
+                <div id="stockListado" class="col-1"></div>
+                <div id="acciones" class="col-2"></div>
+            </div>     
 
 
         </div>

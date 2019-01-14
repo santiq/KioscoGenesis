@@ -33,9 +33,12 @@ admin.initializeApp({
 var db = admin.database();
 var ref = db.ref("/Producto");
 var refVenta = db.ref("/Ventas");
+
 ref.once("value", function(snapshot) {
   console.log(snapshot.val());
+  
 });
+
 // -----------------------    Fin Firebase
 
 //extended: false significa que parsea solo string (no archivos de imagenes por ejemplo)
@@ -43,6 +46,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // ROUTES
+app.get('/json', (req, res) => {
+    ref.once("value", function(snapshot) {
+        res.send(snapshot.val());
+        return snapshot.val();
+    });
+    
+    
+});
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/src/login/login.html'))
@@ -54,8 +65,8 @@ app.get('/ventas', (req, res) => {
 });
 
 app.get('/productos', (req, res) => {
+        
     res.sendFile(path.join(__dirname + '/src/productos/productos.html'));
-    
 });
 app.get('/firebase', (req, res) => {
     
@@ -79,7 +90,7 @@ app.post('/pushProductos', (req, res) => {
     ref.push(datosRecibidos);
     ref.once("value", function(snapshot) {
         console.log(snapshot.val());
-      })
+    })
     
 });
 app.post('/update', (req, res) => {

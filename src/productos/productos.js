@@ -1,3 +1,21 @@
+let datosBase = "";
+const consumirJson = () => { 
+     $.getJSON( "/json" , function(data){
+                datosBase = data;
+                $.each(data, function(i, dato){
+                    
+                    console.log(dato.nombre + dato.codigoInterno);
+                    console.log(dato.codigoInterno);
+                    $('#nombreListado').append("<p>" + dato.nombre + "</p>")
+                    $('#codigoInternoList').append("<p>" + dato.codigoInterno + "</p>")
+                    $('#eanListado').append("<p>" + dato.ean + "</p>")
+                    $('#precioVentaListado').append("<p>" + dato.preciodeVenta + "</p>")
+                    $('#stockListado').append("<p>" + dato.cantidad + "</p>")
+                    $('#acciones').append("<p>" + i + "</p>")
+                })
+    })
+}
+
 const enviarDatos = (accion) => {
         
     const nombreProducto = $('#nombreProducto').val();
@@ -24,10 +42,14 @@ const enviarDatos = (accion) => {
         data: datos
     });
 
+    consumirJson()
+
 
     /*$.post(accion, datos, (response) => {
        console.log('El INDEX RESPONDE' + response);
     })*/
 
 
-}
+};
+
+consumirJson()
