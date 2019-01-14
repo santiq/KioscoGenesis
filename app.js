@@ -31,15 +31,16 @@ admin.initializeApp({
 });
 
 var db = admin.database();
-var ref = db.ref("/");
+var ref = db.ref("/Producto");
+var refVenta = db.ref("/Ventas");
 ref.once("value", function(snapshot) {
   console.log(snapshot.val());
 });
 // -----------------------    Fin Firebase
 
 //extended: false significa que parsea solo string (no archivos de imagenes por ejemplo)
-app.use(bodyParser.urlencoded({ extended: false }));
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // ROUTES
 
@@ -54,25 +55,36 @@ app.get('/ventas', (req, res) => {
 
 app.get('/productos', (req, res) => {
     res.sendFile(path.join(__dirname + '/src/productos/productos.html'));
+    
 });
 app.get('/firebase', (req, res) => {
     
     //ref.push(productos);
-    res.sendFile(path.join(__dirname + '/src/index.html'));
+    res.sendFile(path.join(__dirname + '/src/start.html'));
 });
 
-// ACA HAGO LOS ROUTES PERO UTTILIZANDO THEME
+/*// ACA HAGO LOS ROUTES PERO UTTILIZANDO THEME
 app.post('/ventas', (req, res) => {
     res.sendFile(path.join(__dirname + '/src/ventas/ventas.html'));
-});
+});*/
 // FIN ROUTES
 
 // ACA VOY A HACER UNA PEQUEÑA API REST PARA ENVIAR A FIREBASE
-app.post('/push', (req, res) => {
-    ref.push(req);
+app.post('/pushProductos', (req, res) => {
+    //console.log(req)
+    //console.log(res)
+    
+    let datosRecibidos = req.body;
+    console.log(datosRecibidos);
+    ref.push(datosRecibidos);
+    ref.once("value", function(snapshot) {
+        console.log(snapshot.val());
+      })
+    
 });
 app.post('/update', (req, res) => {
-    ref.update(req);
+    let datosRecibidos = req.body;
+    ref.update(datosRecibidos);
 });
 
 

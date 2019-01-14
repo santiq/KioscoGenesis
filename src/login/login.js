@@ -1,7 +1,5 @@
 const cambioPagina = function(pagina) {
-    $.post( pagina) 
-      
-   
+    window.location.replace(pagina)
 }
 
 function validar() {

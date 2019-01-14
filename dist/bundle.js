@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log(\"Alerta desde Index\");\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\r\n    const enviarDatos = (accion) => {\r\n        \r\n        const inputNombre = $('#nombreP').val();\r\n        console.log(accion);\r\n        let datos = {\r\n            \"Producto\": {\r\n              \"codigoInterno\": {},\r\n              \"ean\": {},\r\n              \"nombre\": inputNombre,\r\n              \"preciodeVenta\": {},\r\n              \"cantidad\": {}\r\n            },\r\n            \"Ventas\": {\r\n              \"productosVendidos\": {\r\n                \"codigoInterno\": {},\r\n                \"ean\": {},\r\n                \"nombre\": {},\r\n                \"preciodeVenta\": {},\r\n                \"cantidadVendida\": {},\r\n                \"cantidadRestante\": {}\r\n              },\r\n              \"precioTotal\": {},\r\n              \"ndeVenta\": {},\r\n              \"fecha\": {}\r\n            }\r\n          }\r\n    \r\n    \r\n        $.post(accion, datos, (response) => {\r\n           console.log('El INDEX RESPONDE' + response);\r\n        })\r\n    \r\n    \r\n    }\r\n    \r\n\r\n\r\n\r\n\r\n    \r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
