@@ -42,7 +42,7 @@ const enviarDatos = (accion) => {
         data: datos
     });
 
-    consumirJson()
+
 
 
     /*$.post(accion, datos, (response) => {
