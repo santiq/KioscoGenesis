@@ -24,14 +24,15 @@ app.use(express.static(__dirname + '/dist/images'));
 app.use(express.static(__dirname + '/dist/bundle.js'));
 
 
-// ACA INICIO TODO LO RELACIONADO A FIREBASE Y TIRO UNA PRUEBA EN CONSOLA
+// ACA INICIO TODO LO RELACIONADO A FIREBASE Y TIRO UNA PRUEBA EN CONSOLA {
+
 admin.initializeApp({
-  serviceAccount: {
-    project_id: process.env.project_id,
-    private_key_id: process.env.private_key_id,
-    clientEmail: process.env.client_email,
-    privateKey: process.env.private_key
-  },
+    credential: admin.credential.cert({ 
+        "project_id": process.env.project_id,
+        "private_key_id": process.env.private_key_id,
+        "clientEmail": process.env.client_email,
+        "private_key": process.env.private_key
+      }),
   //admin.credential.cert(serviceAccount),
   databaseURL: "https://kioscogenesis-26031.firebaseio.com"
 });
