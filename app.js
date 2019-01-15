@@ -3,7 +3,7 @@ var app = express();
 var path = require ('path');
 const bodyParser = require('body-parser');
 var admin = require("firebase-admin");
-var serviceAccount = require("./kioscogenesis-26031-firebase-adminsdk-mjxw1-e30be1f7d1.json");
+//var serviceAccount = require("./kioscogenesis-26031-firebase-adminsdk-mjxw1-e30be1f7d1.json");
 
 
 // ACA ESPECIFICO LOS DIRECTORIO DE ARCHIVOS ESTATICOS
@@ -26,7 +26,13 @@ app.use(express.static(__dirname + '/dist/bundle.js'));
 
 // ACA INICIO TODO LO RELACIONADO A FIREBASE Y TIRO UNA PRUEBA EN CONSOLA
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+  serviceAccount: {
+    project_id: process.env.project_id,
+    private_key_id: process.env.private_key_id,
+    clientEmail: process.env.client_email,
+    privateKey: process.env.private_key
+  },
+  //admin.credential.cert(serviceAccount),
   databaseURL: "https://kioscogenesis-26031.firebaseio.com"
 });
 
