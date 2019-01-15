@@ -17,6 +17,7 @@
     "webpack": "^4.28.3"
   },
   "scripts": {
+    "start": "nodemon app",
     "test": "console.log(\"Hola\")",
     "build": "webpack"
   },
