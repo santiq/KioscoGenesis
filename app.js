@@ -31,7 +31,7 @@ admin.initializeApp({
         "project_id": process.env.project_id,
         "private_key_id": process.env.private_key_id,
         "clientEmail": process.env.client_email,
-        "private_key": process.env.private_key
+        "private_key": process.env.private_key.replace(/\\n/g, '\n')
       }),
   //admin.credential.cert(serviceAccount),
   databaseURL: "https://kioscogenesis-26031.firebaseio.com"
