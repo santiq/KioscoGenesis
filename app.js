@@ -106,10 +106,9 @@ app.post('/update', (req, res) => {
 });
 
 
-app.listen(3000, function(){
+app.listen(80, function(){
     console.log('Se abrio el servidor en el puerto 3000');
 });
-
 
 
 
