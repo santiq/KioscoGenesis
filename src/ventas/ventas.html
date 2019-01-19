@@ -1,111 +1,114 @@
 <!DOCTYPE html>
-  <html lang="en">
-    <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-        <LINK REL=StyleSheet HREF="ventas.css" TYPE="text/css" MEDIA=screen>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Ventas</title>
-    </head>
-      <body id="LoginForm">
-        <div class="container-fluid">
-            <div class="row justify-content-start">
-                    <div class="col py-5 text-decoration-none"> 
-                            <h1 class="text-center">Ventas</h1>
-                    </div>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <LINK REL=StyleSheet HREF="ventas.css" TYPE="text/css" MEDIA=screen>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ventas</title>
+</head>
+
+<body id="LoginForm">
+    <div class="container-fluid">
+        <div class="row justify-content-start">
+            <div class="col py-5 text-decoration-none">
+                <h1 class="text-center">Ventas</h1>
             </div>
-            <div class="row my-4 p-5 bg-white rounded">
+        </div>
+        <div class="row my-4 p-5 bg-white rounded">
             <div class="col-2">
-                    <input type="text" class="form-control col-form-label-lg">
-                    <div class="row">
-                      <div class="col-4 my-3">    
-                        <button onClick="agregar()" type="button" class="btn btn-primary" >Agregar</button>
-                      </div>  
-                      <div class="col-4 my-3">
-                        <a href="src\productos\productos.html" ><button type="button" class="btn btn-primary">Productos</button></a>
-                      </div>
-                      <div class="col-4 my-3"> 
-                        <button onClick="borrar()" type="button" class="btn btn-danger"> Borrar </button>  
-                      </div>
-                    </div>  
-            </div>            
+                <input type="text" class="form-control col-form-label-lg">
+                <div class="row">
+                    <div class="col-4 my-3">
+                        <button onClick="agregar()" type="button" class="btn btn-primary">Agregar</button>
+                    </div>
+                    <div class="col-4 my-3">
+                        <a href="../productos/"><button type="button" class="btn btn-primary">Productos</button></a>
+                    </div>
+                    <div class="col-4 my-3">
+                        <button onClick="borrar()" type="button" class="btn btn-danger"> Borrar </button>
+                    </div>
+                </div>
+            </div>
             <div class="col-10 table-responsive">
                 <table class="table">
-                        <thead>
-                          <tr>
+                    <thead>
+                        <tr>
                             <th scope="col">Cantidad</th>
                             <th scope="col">Ean</th>
                             <th scope="col">Descripcion</th>
                             <th scope="col">Precio</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
                             <th scope="row"></th>
                             <td></td>
                             <td></td>
                             <td></td>
-                          </tr> 
-                          <tr>
+                        </tr>
+                        <tr>
                             <th scope="row"></th>
                             <td></td>
                             <td></td>
                             <td></td>
-                          </tr>
-                          <tr>
+                        </tr>
+                        <tr>
                             <th scope="row"></th>
                             <td></td>
                             <td></td>
                             <td></td>
-                          </tr>
-                          <tr>
+                        </tr>
+                        <tr>
                             <th scope="row"></th>
                             <td></td>
                             <td></td>
                             <td></td>
-                          </tr>
-                          <tr>
+                        </tr>
+                        <tr>
                             <th scope="row"></th>
                             <td></td>
                             <td></td>
                             <td></td>
-                          </tr> 
-                          <tr>
+                        </tr>
+                        <tr>
                             <th scope="row"></th>
                             <td></td>
                             <td></td>
                             <td></td>
-                          </tr>
-                          <tr>
+                        </tr>
+                        <tr>
                             <th scope="row"></th>
                             <td></td>
                             <td></td>
                             <td></td>
-                          </tr>
-                          <tr>
+                        </tr>
+                        <tr>
                             <th scope="row"></th>
                             <td></td>
                             <td></td>
                             <td></td>
-                          </tr>   
-                        </tbody>
-                      </table>            
-            </div>            
-                <div class="row justify-content">
-                  <div class="col-4">                  
-                      <div class="card border-success mb-3">
-                          <div class="card-header">Novedades..</div>
-                          <div class="card-body text-success">
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row justify-content">
+                <div class="col-4">
+                    <div class="card border-success mb-3">
+                        <div class="card-header">Novedades..</div>
+                        <div class="card-body text-success">
                             <h5 class="card-title">¡Mejorá el Contenido! </h5>
                             <p class="card-text">Recordá que en cualquier momento podes pedir nuevos modulos de implementación. No dudes en consultar! </p>
-                          </div>
-                      </div>
-                  </div>           
+                        </div>
+                    </div>
                 </div>
-        
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    </body>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+
 </html>
