@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div >
+                <table id="datos" width="100%">
+                  <tr>
+                    <th>
+                      Album ID
+                    </th>
+                    <th>Id</th>
+                    <th>Titulo</th>
+                    <th>Thumbnail</th>
+                  </tr>
+                  
+                  
+               </table>
+               
+             </div>
+
+
+
+
+<script>
+
+let objeto = [];
+let tabla = document.getElementById('datos');
+
+    fetch('http://jsonplaceholder.typicode.com/photos')
+ .then(response => response.json())
+ .then((json) => {
+    objeto = json;
+    [objeto[0],objeto[1],objeto[2]].forEach(function(item){
+       console.log(item);
+    tabla.innerHTML += `
+                <tr>
+                    <td>${item.albumId}</td>
+                    <td>${item.id}</td>
+                    <td>${item.title}</td>
+                    <td><a href="${item.url}"><img src="${item.thumbnailUrl}"></img></a></td>
+                </tr>  `               
+      
+    })})
+        
+
+    </script>    
+</body>
+</html>
+
+
