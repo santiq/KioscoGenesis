@@ -121,6 +121,7 @@ app.post('/api/producto', (req, res) => {
     ref.child(id).once('value', (snapshot) => {
         let producto = snapshot.val();
         producto.id = id;
+        ref.push(datosRecibidos);
         res.status(200).json({
             status: 200,
             message: "articulo creado",
