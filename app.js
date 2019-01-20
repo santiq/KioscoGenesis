@@ -26,7 +26,6 @@ app.use(express.static(__dirname + '/dist/bundle.js'));
 
 
 // ACA INICIO TODO LO RELACIONADO A FIREBASE Y TIRO UNA PRUEBA EN CONSOLA {
-
 admin.initializeApp({
     credential: admin.credential.cert({
         "project_id": process.env.project_id,

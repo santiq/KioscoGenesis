@@ -6,12 +6,18 @@ const consumirJson = () => {
                     
                     console.log(dato.nombre + dato.codigoInterno);
                     console.log(dato.codigoInterno);
-                    $('#nombreListado').append("<p>" + dato.nombre + "</p>")
-                    $('#codigoInternoList').append("<p>" + dato.codigoInterno + "</p>")
-                    $('#eanListado').append("<p>" + dato.ean + "</p>")
-                    $('#precioVentaListado').append("<p>" + dato.preciodeVenta + "</p>")
-                    $('#stockListado').append("<p>" + dato.cantidad + "</p>")
-                    $('#acciones').append("<p>" + i + "</p>")
+                    $('#productosList').append(`
+                    <tr class="itemProducto">
+                        <td>${dato.codigoInterno}</td>
+                        <td>${dato.nombre} </td>
+                        <td>${dato.ean} </td>
+                        <td>${dato.precioVenta} </td>
+                        <td>${dato.cantidad}</td>
+                        <td><div class="row">
+                        <button id="editar" onclick="" class="btn btn-sm btn-success"><i class="fas fa-pencil-alt"></i> Editar</button>
+                        <button id="eliminar" onclick="" class="btn btn-sm btn-danger"><i class="fas fa-times"></i> Eliminar</button> </div> </td> </tr>`)
+                        
+                        
                 })
     })
 }
