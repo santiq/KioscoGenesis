@@ -3,6 +3,7 @@ var app = express();
 var path = require('path');
 const bodyParser = require('body-parser');
 var admin = require("firebase-admin");
+var orto = process.env.PORT;
 //var serviceAccount = require("./kioscogenesis-26031-firebase-adminsdk-mjxw1-e30be1f7d1.json");
 
 
@@ -160,6 +161,6 @@ app.put('/api/producto/:id', (req, res) => {
 });
 
 
-app.listen(3000, function() {
-    console.log('Se abrio el servidor en el puerto 3000');
+app.listen(orto, function() {
+    console.log('Se abrio el servidor en el puerto' + orto);
 });
