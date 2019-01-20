@@ -160,6 +160,6 @@ app.put('/api/producto/:id', (req, res) => {
 });
 
 
-app.listen(80, function() {
+app.listen(3000, function() {
     console.log('Se abrio el servidor en el puerto 3000');
 });
