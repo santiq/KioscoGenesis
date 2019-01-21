@@ -1,4 +1,6 @@
 # KioscoGenesis
+
+subimos el proyecto a heroku lo podes ver aca: https://kioscogenesis.herokuapp.com/
 Sistema para Kiosco, Proyecto Alcanzado por Phenrrill para practica de Aprendizaje
 
 es un Pequeño sistema de Ventas que estamos realizando con un Grupo de la ciudad de #Rosario que estan aprendiendo a Programar desde 0.
