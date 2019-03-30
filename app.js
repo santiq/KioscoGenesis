@@ -113,11 +113,29 @@ app.get('/api/producto/:id', (req, res) => {
     });
 });
 
-app.post('/api/producto', (req, res) => {
+// Mover esto mas arriba, no ser villero.
+const auth = require('./middlewares/auth');
+
+app.post('/api/producto', auth.isAuth, (req, res) => {
     //Al usar POST se indica que se esta creando
+    
+
+    /* 
+     Tiene estra estructura, se puede modificar en ./middlewares/auth
+    {
+      userId,
+      firebaseId,
+      email,
+    }
+    */
+    const user = req.user;
     let datosRecibidos = req.body;
+
+    datosRecibidos.userId = user.userId;
+
     console.log(datosRecibidos);
     let id = ref.push(datosRecibidos).key;
+
     ref.child(id).once('value', (snapshot) => {
         let producto = snapshot.val();
         producto.id = id;
